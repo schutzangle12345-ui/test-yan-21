@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | test-yan-21 - Enterprise AI Strategy Consulting</title>
+    <meta name="description" content="Connect with test-yan-21 for expert enterprise AI strategy consulting. Start your 90-day roadmap today.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+        :root {
+            --color-primary: #000000;
+            --color-primary-dark: #000000;
+            --color-accent: #FFFFFF;
+            --color-background: #0a0a0a;
+            --color-surface: #141414;
+            --color-text: #f5f5f5;
+            --color-text-muted: #888888;
+            --color-border: #262626;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--color-accent);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo-container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-text);
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Sections */
+        section {
+            padding: 160px 5%;
+        }
+
+        .hero-contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .hero-contact h1 {
+            font-size: clamp(40px, 8vw, 72px);
+            margin-bottom: 24px;
+            max-width: 900px;
+        }
+
+        .hero-contact p {
+            font-size: 20px;
+            color: var(--color-text-muted);
+            max-width: 600px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar Info */
+        .contact-info h2 {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+
+        .info-block {
+            margin-bottom: 48px;
+        }
+
+        .info-block h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            margin-bottom: 12px;
+        }
+
+        .info-block p {
+            font-size: 18px;
+            color: var(--color-text);
+        }
+
+        /* Form Styling */
+        .contact-form-container {
+            background: var(--color-surface);
+            padding: 48px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text-muted);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            background: #1a1a1a;
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+            padding: 14px;
+            font-size: 16px;
+            font-family: inherit;
+            border-radius: 4px;
+            transition: border-color 0.2s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-text-muted);
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 24px;
+            padding: 16px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 120px 5% 60px;
+            border-top: 1px solid var(--color-border);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .footer-brand p {
+            color: var(--color-text-muted);
+            margin-top: 16px;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-links h4 {
+            font-size: 14px;
+            margin-bottom: 24px;
+            color: var(--color-accent);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 13px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 120px 5%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-contact h1 {
+                font-size: 36px;
+            }
+
+            .contact-form-container {
+                padding: 24px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <base href="/enterprise-ai-strategy/" />
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo-container">
+            <img src="logo-test-yan-21.png" alt="test-yan-21 logo" style="height:40px;object-fit:contain">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="auth.html">Sign In</a>
+            <a href="contact.html" class="btn-primary">Get Expert Advice</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-contact">
+            <h1>Scale AI from pilot to P&L impact.</h1>
+            <p>Ready to move past fragmented experimentation? Our strategy team helps CTOs and CAIOs define high-impact 90-day roadmaps and build robust enterprise portfolios.</p>
+        </section>
+
+        <section style="padding-top: 0;">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Strategic Advisory Inquiry</h2>
+                    
+                    <div class="info-block">
+                        <h3>Our Approach</h3>
+                        <p>We don't sell generic AI visions. We provide structured criteria for build vs. buy decisions and link every initiative to specific business outcomes.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Contact Details</h3>
+                        <p>advisory@enterpriseaistrategy.com</p>
+                        <p>+1 (555) 012-3456</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Headquarters</h3>
+                        <p>101 Tech Plaza, San Francisco, CA</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Focus Areas</h3>
+                        <ul style="color: var(--color-text-muted); font-size: 16px; margin-top: 8px;">
+                            <li>• 90-Day AI Roadmap Development</li>
+                            <li>• Build vs. Buy Decision Matrices</li>
+                            <li>• ROI & KPI Frameworks for AI</li>
+                            <li>• Risk, Compliance & Governance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form data-backend="form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@enterprise.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Your Role</label>
+                            <select id="role" name="role" required>
+                                <option value="" disabled selected>Select your title</option>
+                                <option value="CTO">CTO</option>
+                                <option value="Chief AI Officer">Chief AI Officer</option>
+                                <option value="CEO / Board Member">CEO / Board Member</option>
+                                <option value="CFO / Finance">CFO / Finance</option>
+                                <option value="Strategy / Operations">Strategy / Operations</option>
+                                <option value="Other">Other Executive Role</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="challenge">Primary Challenge</label>
+                            <select id="challenge" name="challenge" required>
+                                <option value="" disabled selected>What is your biggest roadblock?</option>
+                                <option value="Fragmented internal pilots">Internal pilots running in silos</option>
+                                <option value="Unclear AI ROI/KPIs">Lack of simple KPIs linking to P&L</option>
+                                <option value="Boiling the ocean">Visions that lack 90-day value</option>
+                                <option value="Build vs Buy decisions">Struggling with Build vs Buy</option>
+                                <option value="Governance & Risk">Governance, Security & Risk</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Briefly describe your current AI initiatives and what you're looking to achieve in the next 12 months..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary form-submit">Request Strategic Consultation</button>
+                        
+                        <p data-success style="display:none; color: #ffffff; background: #000; border: 1px solid var(--color-text-muted); padding: 15px; border-radius: 4px; font-weight: bold; margin-top: 1.5rem; text-align: center;">
+                            Success! Our advisory team will be in touch within 24 hours.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-container">
+                    <img src="logo-test-yan-21.png" alt="test-yan-21 logo" style="height:32px;object-fit:contain">
+                </div>
+                <p>Enterprise AI strategy consulting that bridges the gap between ambitious vision and realized P&L impact.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">AI Roadmaps</a></li>
+                    <li><a href="#">Build vs Buy</a></li>
+                    <li><a href="#">Governance</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="auth.html">Client Portal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 test-yan-21. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#">
+                    <svg viewBox="0 0 24 24"><path d="M22.23 0H1.77C.8 0 0 .8 0 1.77v20.46C0 23.2.8 24 1.77 24h20.46c.98 0 1.77-.8 1.77-1.77V1.77C24 .8 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.58c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.86 3.38-1.86 3.62 0 4.29 2.38 4.29 5.48v6.27z"/></svg>
+                </a>
+                <a href="#">
+                    <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+      var BACKEND = 'http://localhost:3000/api';
+      var TOKEN = 'aa42c46111272da0786cd02c0c27d7c5eb8b493f7a294c3bce763c659efec4c8';
+      var DOMAIN = 'enterpriseaistrategy.com';
+      var HEADERS = { 'Content-Type': 'application/json', 'X-Token': TOKEN, 'X-Domain': DOMAIN };
+
+      var FORM_ID = '202';
+
+      // 3. Handle forms (Contact, Signup, Waitlist)
+      document.addEventListener('submit', function(e) {
+        var form = e.target.closest('form[data-backend]');
+        if (!form) return;
+        e.preventDefault();
+        var type = form.getAttribute('data-backend');
+        var endpoint = type === 'signup' ? '/users' : '/forms/submit';
+        
+        // Extract dynamic form fields
+        var data = {};
+        new FormData(form).forEach(function(v, k) { data[k] = v; });
+        
+        // Add Form ID if it's a general form and we have it
+        if (type === 'form' && FORM_ID) {
+          data.formId = FORM_ID;
+        }
+
+        var btn = form.querySelector('button[type="submit"]');
+        var originalText = '';
+        if (btn) {
+          originalText = btn.innerText;
+          btn.innerText = 'Sending...';
+          btn.disabled = true;
+        }
+
+
+        // Submit Form Data
+        fetch(BACKEND + endpoint, {
+          method: 'POST',
+          headers: HEADERS,
+          body: JSON.stringify(data)
+        }).then(function(r) { return r.json(); }).then(function(res) {
+          if (res.success) {
+            var msg = form.querySelector('[data-success]');
+            if (msg) { msg.style.display = 'block'; }
+            form.reset();
+            if (btn) btn.style.display = 'none';
+          } else {
+            alert(res.error || 'Failed to submit form');
+            if (btn) { btn.innerText = originalText; btn.disabled = false; }
+          }
+        }).catch(function(){
+          alert('Network error occurred');
+          if (btn) { btn.innerText = originalText; btn.disabled = false; }
+        });
+      });
+    })();
+    </script>
+</body>
+</html>
